@@ -1,0 +1,2 @@
+C:\Users\tova\Documents\Unreal Projects\MyProject4\Intermediate\Build\Win64\UE4Editor\Development\MyProject4\Definitions.MyProject4.h
+C:\Users\tova\Documents\Unreal Projects\MyProject4\Source\MyProject4\MyProject4.h

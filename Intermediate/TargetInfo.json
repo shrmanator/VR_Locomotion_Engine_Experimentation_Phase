@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "MyProject4",
+			"Path": "C:\\Users\\tova\\Documents\\Unreal Projects\\MyProject4\\Source\\MyProject4.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "MyProject4Editor",
+			"Path": "C:\\Users\\tova\\Documents\\Unreal Projects\\MyProject4\\Source\\MyProject4Editor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
