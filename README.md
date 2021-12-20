@@ -1,6 +1,6 @@
-This repository contains implementations of various VR Locomotion ideas. 
+**This repository contains implementations of various VR Locomotion ideas. **
 
-Note: All implementations are in early developmental phase. 
+Note: _All implementations are in early developmental phase. _
 
 Locomotion concept(s) currently under experimentation 
   - Jogging/Walking in place [VRCharacter_Trudge.h + VRCharacter_Trudge.cpp]
