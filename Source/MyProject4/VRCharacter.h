@@ -42,7 +42,6 @@ class MYPROJECT4_API AVRCharacter : public ACharacter
 		class UStaticMeshComponent* DestinationMarker;
 
 		UPROPERTY(EditAnywhere)
-		// the teleport distance is defaulted to 10 meters.
-		float MaxTeleportDistance = 1000;
+		float MaxTeleportDistance = 1000;  // teleport distance default == 10 meters.
 
 };

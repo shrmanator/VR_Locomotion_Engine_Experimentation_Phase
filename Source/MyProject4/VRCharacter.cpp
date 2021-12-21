@@ -70,17 +70,17 @@ void AVRCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 void AVRCharacter::UpdateDestinationMarker()
 {
-	// Start location is where our eye currently are (aka, the camera's view)
+	// Start location  [where our eyes currently are (aka, the camera's view)]
 	FVector Start = Camera->GetComponentLocation();
 
-	// End location is the teleport distance's radius around the player
+	// End location
 	FVector End = Start + Camera->GetForwardVector() * MaxTeleportDistance;
-
-	FHitResult HitResult;
+	
+	FHitResult HitResult; // location where ray-trace hits:
 	bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, Start, End, ECC_Visibility);
 	if (bHit)
 	{
-		DestinationMarker->SetWorldLocation(HitResult);
+		DestinationMarker->SetWorldLocation(HitResult.Location);
 	}
 }
 
