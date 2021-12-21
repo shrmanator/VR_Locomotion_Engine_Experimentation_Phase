@@ -58,7 +58,12 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AVRCharacter)
 
 
-#define MyProject4_Source_MyProject4_VRCharacter_h_12_PRIVATE_PROPERTY_OFFSET
+#define MyProject4_Source_MyProject4_VRCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__Camera() { return STRUCT_OFFSET(AVRCharacter, Camera); } \
+	FORCEINLINE static uint32 __PPO__VRRoot() { return STRUCT_OFFSET(AVRCharacter, VRRoot); } \
+	FORCEINLINE static uint32 __PPO__DestinationMarker() { return STRUCT_OFFSET(AVRCharacter, DestinationMarker); }
+
+
 #define MyProject4_Source_MyProject4_VRCharacter_h_9_PROLOG
 #define MyProject4_Source_MyProject4_VRCharacter_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

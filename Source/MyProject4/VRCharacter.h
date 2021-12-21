@@ -11,21 +11,38 @@ class MYPROJECT4_API AVRCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
-public:
-	// Sets default values for this character's properties
-	AVRCharacter();
+	public:
+		// Sets default values for this character's properties
+		AVRCharacter();
 
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+	protected:
+		// Called when the game starts or when spawned
+		virtual void BeginPlay() override;
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+	public:
+		// Called every frame
+		virtual void Tick(float DeltaTime) override;
 
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+		// Called to bind functionality to input
+		virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+
+	private:
+		void UpdateDestinationMarker();
+		void MoveForward(float throttle);
+		void MoveRight(float throttle);
+
+		UPROPERTY(VisibleAnywhere)
+		class UCameraComponent* Camera;
+
+		UPROPERTY(VisibleAnywhere)
+		class USceneComponent* VRRoot;
+
+		UPROPERTY(VisibleAnywhere)
+		class UStaticMeshComponent* DestinationMarker;
+
+		UPROPERTY(EditAnywhere)
+		// the teleport distance is defaulted to 10 meters.
+		float MaxTeleportDistance = 1000;
 
 };
-
-private:
