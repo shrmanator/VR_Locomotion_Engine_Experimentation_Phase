@@ -5,6 +5,7 @@
 #include "Camera/CameraComponent.h"
 #include "Components/InputComponent.h"
 #include "Components/StaticMeshComponent.h"
+#include "Components/SceneComponent.h"
 
 // Sets default values
 AVRCharacter::AVRCharacter()
@@ -37,6 +38,7 @@ void AVRCharacter::BeginPlay()
 	NewCameraOffset.Z = -75;
 	AddActorWorldOffset(NewCameraOffset);
 	VRRoot->AddWorldOffset(-NewCameraOffset);
+	DestinationMarker->SetVisibility(false);
 }
 
 // Called every frame
@@ -76,12 +78,21 @@ void AVRCharacter::UpdateDestinationMarker()
 	// End location
 	FVector End = Start + Camera->GetForwardVector() * MaxTeleportDistance;
 	
-	FHitResult HitResult; // location where ray-trace hits:
+	FHitResult HitResult; // location where ray-cast hits:
 	bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, Start, End, ECC_Visibility);
 	if (bHit)
 	{
+		// Set DestinationMarker to be
+		// visible within the MaxTeleportDistance range
+		DestinationMarker->SetVisibility(true);
 		DestinationMarker->SetWorldLocation(HitResult.Location);
 	}
+	else {
+		// when out of range
+		DestinationMarker->SetVisibility(false);
+	}
+
+
 }
 
 

@@ -92,9 +92,7 @@ void EmptyLinkFunctionForGeneratedCodeVRCharacter() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AVRCharacter_Statics::NewProp_MaxTeleportDistance_MetaData[] = {
 		{ "Category", "VRCharacter" },
-		{ "Comment", "// the teleport distance is defaulted to 10 meters.\n" },
 		{ "ModuleRelativePath", "VRCharacter.h" },
-		{ "ToolTip", "the teleport distance is defaulted to 10 meters." },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AVRCharacter_Statics::NewProp_MaxTeleportDistance = { "MaxTeleportDistance", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AVRCharacter, MaxTeleportDistance), METADATA_PARAMS(Z_Construct_UClass_AVRCharacter_Statics::NewProp_MaxTeleportDistance_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AVRCharacter_Statics::NewProp_MaxTeleportDistance_MetaData)) };
@@ -131,7 +129,7 @@ void EmptyLinkFunctionForGeneratedCodeVRCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AVRCharacter, 1096914420);
+	IMPLEMENT_CLASS(AVRCharacter, 3724649556);
 	template<> MYPROJECT4_API UClass* StaticClass<AVRCharacter>()
 	{
 		return AVRCharacter::StaticClass();

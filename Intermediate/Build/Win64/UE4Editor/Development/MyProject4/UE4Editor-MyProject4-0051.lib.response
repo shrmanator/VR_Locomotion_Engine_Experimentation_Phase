@@ -1,0 +1,19 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-MyProject4-0051.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\tova\Documents\Unreal Projects\MyProject4\Intermediate\Build\Win64\MyProject4Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Users\tova\Documents\Unreal Projects\MyProject4\Intermediate\Build\Win64\UE4Editor\Development\MyProject4\ArchVizAssets.cpp.obj"
+"C:\Users\tova\Documents\Unreal Projects\MyProject4\Intermediate\Build\Win64\UE4Editor\Development\MyProject4\MyProject4.cpp.obj"
+"C:\Users\tova\Documents\Unreal Projects\MyProject4\Intermediate\Build\Win64\UE4Editor\Development\MyProject4\MyProject4GameModeBase.cpp.obj"
+"C:\Users\tova\Documents\Unreal Projects\MyProject4\Intermediate\Build\Win64\UE4Editor\Development\MyProject4\VRCharacter.cpp.obj"
+"C:\Users\tova\Documents\Unreal Projects\MyProject4\Intermediate\Build\Win64\UE4Editor\Development\MyProject4\ArchVizAssets.gen.cpp.obj"
+"C:\Users\tova\Documents\Unreal Projects\MyProject4\Intermediate\Build\Win64\UE4Editor\Development\MyProject4\MyProject4.init.gen.cpp.obj"
+"C:\Users\tova\Documents\Unreal Projects\MyProject4\Intermediate\Build\Win64\UE4Editor\Development\MyProject4\MyProject4GameModeBase.gen.cpp.obj"
+"C:\Users\tova\Documents\Unreal Projects\MyProject4\Intermediate\Build\Win64\UE4Editor\Development\MyProject4\VRCharacter.gen.cpp.obj"
+"C:\Users\tova\Documents\Unreal Projects\MyProject4\Intermediate\Build\Win64\UE4Editor\Development\MyProject4\Default.rc2.res"
+/OUT:"C:\Users\tova\Documents\Unreal Projects\MyProject4\Intermediate\Build\Win64\UE4Editor\Development\MyProject4\UE4Editor-MyProject4-0051.lib"
