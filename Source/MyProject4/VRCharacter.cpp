@@ -67,9 +67,14 @@ void AVRCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	PlayerInputComponent->BindAxis(TEXT("Forward"), this,&AVRCharacter::MoveForward);
 	PlayerInputComponent->BindAxis(TEXT("Right"), this, &AVRCharacter::MoveRight);
 
+	PlayerInputComponent->BindAction(TEXT("Teleport"), IE_Released, this, &AVRCharacter::Teleport);
 }
 
-
+/*
+Sets the maximum ray-cast distance around the player
+and ensures the destination marker dissapears if max
+ray cast distance is exceeded.
+*/
 void AVRCharacter::UpdateDestinationMarker()
 {
 	// Start location  [where our eyes currently are (aka, the camera's view)]
@@ -82,7 +87,7 @@ void AVRCharacter::UpdateDestinationMarker()
 	bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, Start, End, ECC_Visibility);
 	if (bHit)
 	{
-		// Set DestinationMarker to be
+		// Set DestinationMarker mesh object to be
 		// visible within the MaxTeleportDistance range
 		DestinationMarker->SetVisibility(true);
 		DestinationMarker->SetWorldLocation(HitResult.Location);
@@ -106,3 +111,8 @@ void AVRCharacter::MoveRight(float throttle)
 	AddMovementInput(throttle * Camera->GetRightVector());
 }
 
+
+void AVRCharacter::Teleport()
+{
+	SetActorLocation(DestinationMarker->GetComponentLocation());
+}

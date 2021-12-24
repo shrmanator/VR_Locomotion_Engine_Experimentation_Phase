@@ -31,6 +31,7 @@ class MYPROJECT4_API AVRCharacter : public ACharacter
 		void UpdateDestinationMarker();
 		void MoveForward(float throttle);
 		void MoveRight(float throttle);
+		void Teleport();
 
 		UPROPERTY(VisibleAnywhere)
 		class UCameraComponent* Camera;
